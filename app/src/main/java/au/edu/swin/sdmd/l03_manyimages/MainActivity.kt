@@ -14,9 +14,12 @@ class MainActivity : AppCompatActivity() {
         val image = findViewById<ImageView>(R.id.imageView)
 
         val station = findViewById<Button>(R.id.station)
-        station.setOnClickListener {
-            image.setImageDrawable(getDrawable(R.drawable.station))
-        }
+        station.setOnClickListener(
+            //callback on-click handling function
+            {
+                image.setImageDrawable(getDrawable(R.drawable.station))
+            }
+        )
 
         val onClickTheatre = View.OnClickListener {
             image.setImageDrawable(getDrawable(R.drawable.theatre))
